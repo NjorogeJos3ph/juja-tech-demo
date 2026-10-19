@@ -3,89 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betech Computers | Thika</title>
+    <title>TechStore Demo | Laptops & Repairs</title>
     <style>
         :root { --primary: #1e293b; --whatsapp: #25d366; --bg: #f8fafc; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background-color: var(--bg); color: #334155; }
         header { background: var(--primary); color: white; padding: 1rem 5%; font-size: 1.4rem; font-weight: bold; text-align: center; }
-        .hero { text-align: center; padding: 3rem 5%; background: white; border-bottom: 1px solid #e2e8f0; }
+        .hero { text-align: center; padding: 3rem 5%; background: white; }
         .hero h1 { color: var(--primary); margin-bottom: 1rem; }
         .hero p { color: #64748b; }
         .products { padding: 3rem 5%; max-width: 1200px; margin: 0 auto; }
         .products h2 { text-align: center; margin-bottom: 2rem; color: var(--primary); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .product-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #e2e8f0; background-color: #e2e8f0; }
+        .product-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #e2e8f0; }
         .product-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
         .product-title { font-size: 1.2rem; font-weight: bold; color: var(--primary); margin-bottom: 0.5rem; }
         .product-price { font-size: 1.3rem; color: #059669; font-weight: bold; margin-bottom: 1rem; }
-        .product-specs { font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem; flex-grow: 1; line-height: 1.5; }
-        .btn-buy { display: block; text-align: center; background: var(--whatsapp); color: white; padding: 0.9rem; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
-        .btn-buy:hover { background: #1ebe5d; }
-        footer { background: var(--primary); color: white; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 2rem; }
+        .product-specs { font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem; flex-grow: 1; }
+        .btn-buy { display: block; text-align: center; background: var(--whatsapp); color: white; padding: 0.9rem; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
     </style>
 </head>
 <body>
-
-    <header>Betech Computers</header>
-
+    <header>TechStore Demo</header>
     <section class="hero">
-        <h1>Quality Laptops & Expert IT Services in Thika</h1>
-        <p>Your trusted partner for hardware, software, and networking solutions.</p>
+        <h1>Quality Laptops & Expert Repairs</h1>
+        <p>Order directly on WhatsApp.</p>
     </section>
-
     <section class="products">
         <h2>Our Products & Services</h2>
         <div class="grid">
-            
-            <!-- Product 1 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Laptops" class="product-img">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">New & Refurbished Laptops</div>
+                    <div class="product-title">Premium Laptops</div>
                     <div class="product-price">From KSh 24,000</div>
-                    <div class="product-specs">HP, Dell, and Lenovo laptops. Perfect for business, students, and professionals. All come with a warranty.</div>
-                    <a href="#" class="btn-buy" data-product="New & Refurbished Laptops">Order on WhatsApp</a>
+                    <div class="product-specs">HP, Dell, and Lenovo. Perfect for business and students.</div>
+                    <a href="#" class="btn-buy" data-product="Premium Laptops">Order on WhatsApp</a>
                 </div>
             </div>
-            
-            <!-- Product 2 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Repair" class="product-img">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">Laptop Repair & Maintenance</div>
+                    <div class="product-title">Laptop Repair</div>
                     <div class="product-price">From KSh 1,500</div>
-                    <div class="product-specs">Screen replacement, battery issues, software installation, virus removal, and hardware upgrades.</div>
-                    <a href="#" class="btn-buy" data-product="Laptop Repair & Maintenance">Book Repair</a>
+                    <div class="product-specs">Screen replacement, battery issues, and software installation.</div>
+                    <a href="#" class="btn-buy" data-product="Laptop Repair">Book Repair</a>
                 </div>
             </div>
-
-            <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="CCTV" class="product-img">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">CCTV & Networking Setup</div>
+                    <div class="product-title">IT & Networking</div>
                     <div class="product-price">Request Quote</div>
-                    <div class="product-specs">Professional installation of CCTV cameras, network cabling, and Wi-Fi routers for homes and offices.</div>
-                    <a href="#" class="btn-buy" data-product="CCTV & Networking Setup">Request Quote</a>
+                    <div class="product-specs">CCTV installation, network cabling, and Wi-Fi setup.</div>
+                    <a href="#" class="btn-buy" data-product="IT & Networking">Request Quote</a>
                 </div>
             </div>
-            
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Betech Computers. Uhuru Street, Thika.</p>
-    </footer>
-
+    <footer>&copy; 2026 TechStore Demo.</footer>
     <script>
-        // ⚠️ CHANGE THIS TO YOUR NUMBER ONLY ONCE (Include country code, no +)
         const SHOP_WHATSAPP_NUMBER = "254783809340"; 
-
         document.querySelectorAll('.btn-buy').forEach(button => {
             const productName = button.getAttribute('data-product');
-            const message = encodeURIComponent(`Hello Betech Computers, I am interested in the ${productName}.`);
+            const message = encodeURIComponent(`Hello, I am interested in the ${productName}.`);
             button.href = `https://wa.me/${SHOP_WHATSAPP_NUMBER}?text=${message}`;
             button.target = "_blank";
         });
