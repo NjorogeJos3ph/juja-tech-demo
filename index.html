@@ -7,7 +7,7 @@
     <style>
         :root {
             --primary: #1e293b;
-            --accent: #2563eb; /* Tech Blue */
+            --accent: #2563eb;
             --whatsapp: #25d366;
             --bg: #f8fafc;
         }
@@ -27,7 +27,10 @@
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
         
         .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .product-img { width: 100%; height: 180px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem; }
+        
+        /* UPDATED IMAGE STYLING */
+        .product-img { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #e2e8f0; }
+        
         .product-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
         .product-title { font-size: 1.1rem; font-weight: bold; color: var(--primary); margin-bottom: 0.5rem; }
         .product-price { font-size: 1.2rem; color: #059669; font-weight: bold; margin-bottom: 1rem; }
@@ -53,21 +56,21 @@
     <section class="products">
         <h2>Available Laptops</h2>
         <div class="grid">
+            
             <!-- Product 1 -->
             <div class="product-card">
-                <div class="product-img">💻</div>
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HP EliteBook" class="product-img">
                 <div class="product-info">
                     <div class="product-title">HP EliteBook 840 G3</div>
                     <div class="product-price">KSh 24,000</div>
                     <div class="product-specs">Core i5, 8GB RAM, 256GB SSD. Perfect for business and students.</div>
-                    <!-- Note how the link is formatted to send a specific message -->
                     <a href="https://wa.me/254700000000?text=Hello%20Juja%20Tech%20Hub,%20I%20am%20interested%20in%20buying%20the%20HP%20EliteBook%20840%20G3." class="btn-buy" target="_blank">Order on WhatsApp</a>
                 </div>
             </div>
             
             <!-- Product 2 -->
             <div class="product-card">
-                <div class="product-img">💻</div>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dell Latitude" class="product-img">
                 <div class="product-info">
                     <div class="product-title">Dell Latitude E7280</div>
                     <div class="product-price">KSh 28,500</div>
@@ -78,7 +81,7 @@
 
             <!-- Product 3 -->
             <div class="product-card">
-                <div class="product-img">⌨️</div>
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop Repair" class="product-img">
                 <div class="product-info">
                     <div class="product-title">Laptop Repair Service</div>
                     <div class="product-price">From KSh 1,500</div>
@@ -86,11 +89,12 @@
                     <a href="https://wa.me/254783809340?text=Hello%20Juja%20Tech%20Hub,%20I%20need%20a%20laptop%20repair." class="btn-buy" target="_blank">Book Repair</a>
                 </div>
             </div>
+            
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Juja Tech Hub. Located in Juja Town.</p>
+        <p>&copy; 2026 Juja Tech Hub. Located in Juja Town.</p>
     </footer>
 
 </body>
