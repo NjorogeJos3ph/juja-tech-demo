@@ -16,12 +16,13 @@
         .products h2 { text-align: center; margin-bottom: 2rem; color: var(--primary); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .product-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #e2e8f0; }
+        .product-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #e2e8f0; background-color: #e2e8f0;}
         .product-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
         .product-title { font-size: 1.2rem; font-weight: bold; color: var(--primary); margin-bottom: 0.5rem; }
         .product-price { font-size: 1.3rem; color: #059669; font-weight: bold; margin-bottom: 1rem; }
-        .product-specs { font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem; flex-grow: 1; }
-        .btn-buy { display: block; text-align: center; background: var(--whatsapp); color: white; padding: 0.9rem; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .product-specs { font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem; flex-grow: 1; line-height: 1.4; }
+        .btn-buy { display: block; text-align: center; background: var(--whatsapp); color: white; padding: 0.9rem; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s;}
+        .btn-buy:hover { background: #1ebe5d; }
         footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
     </style>
 </head>
@@ -29,45 +30,56 @@
     <header>TechStore Demo</header>
     <section class="hero">
         <h1>Quality Laptops & Expert Repairs</h1>
-        <p>Order directly on WhatsApp.</p>
+        <p>Order directly on WhatsApp. Fast delivery and same-day repairs.</p>
     </section>
     <section class="products">
-        <h2>Our Products & Services</h2>
+        <h2>Available Laptops & Services</h2>
         <div class="grid">
-            <!-- Laptop 1 -->
+            <!-- Laptop 1: HP -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" class="product-img">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" class="product-img" alt="HP Laptop">
                 <div class="product-info">
                     <div class="product-title">HP EliteBook 840 G3</div>
                     <div class="product-price">KSh 24,000</div>
-                    <div class="product-specs">Core i5, 8GB RAM, 256GB SSD. Perfect for business and students.</div>
+                    <div class="product-specs">Core i5, 8GB RAM, 256GB SSD. Perfect for business and students. 3-month warranty included.</div>
                     <a href="#" class="btn-buy" data-product="HP EliteBook 840 G3">Order on WhatsApp</a>
                 </div>
             </div>
-            <!-- Laptop 2 -->
+            <!-- Laptop 2: Dell -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" class="product-img">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Dell Laptop">
                 <div class="product-info">
                     <div class="product-title">Dell Latitude E7280</div>
                     <div class="product-price">KSh 28,500</div>
-                    <div class="product-specs">Core i7, 8GB RAM, 500GB HDD. High performance for professionals.</div>
+                    <div class="product-specs">Core i7, 8GB RAM, 500GB HDD. High performance for professionals and heavy multitasking.</div>
                     <a href="#" class="btn-buy" data-product="Dell Latitude E7280">Order on WhatsApp</a>
                 </div>
             </div>
-            <!-- Laptop 3 -->
+            <!-- Laptop 3: MacBook -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" class="product-img">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" class="product-img" alt="MacBook Air">
                 <div class="product-info">
                     <div class="product-title">MacBook Air M1</div>
                     <div class="product-price">KSh 65,000</div>
-                    <div class="product-specs">Apple M1 chip, 8GB RAM, 256GB SSD. Ultra-fast and lightweight.</div>
+                    <div class="product-specs">Apple M1 chip, 8GB RAM, 256GB SSD. Ultra-fast, lightweight, and premium battery life.</div>
                     <a href="#" class="btn-buy" data-product="MacBook Air M1">Order on WhatsApp</a>
+                </div>
+            </div>
+            <!-- Service: Repair -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Laptop Repair">
+                <div class="product-info">
+                    <div class="product-title">Laptop Repair & Maintenance</div>
+                    <div class="product-price">From KSh 1,500</div>
+                    <div class="product-specs">Screen replacement, battery issues, software installation, virus removal, and hardware upgrades. Same-day service.</div>
+                    <a href="#" class="btn-buy" data-product="Laptop Repair & Maintenance">Book Repair</a>
                 </div>
             </div>
         </div>
     </section>
-    <footer>&copy; 2026 TechStore Demo.</footer>
+    <footer>&copy; 2026 TechStore Demo. Built by Afrixa Technologies.</footer>
     <script>
+        // This is YOUR number acting as the demo endpoint. 
         const SHOP_WHATSAPP_NUMBER = "254783809340"; 
         document.querySelectorAll('.btn-buy').forEach(button => {
             const productName = button.getAttribute('data-product');
